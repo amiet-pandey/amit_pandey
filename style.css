@@ -1,0 +1,6477 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 0 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    background: rgba(5, 5, 5, 0.75);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.logo-subtitle {
+    margin-top: 5px;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+
+    opacity: 0.45;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+    opacity: 0.65;
+
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.theme-button {
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: transparent;
+    color: white;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 140px 8vw 100px;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    max-width: 1000px;
+}
+
+.eyebrow {
+    font-size: 15px;
+    letter-spacing: 3px;
+
+    margin-bottom: 28px;
+
+    opacity: 0.65;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 10vw, 170px);
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    font-weight: 700;
+}
+
+.hero-description {
+    margin-top: 45px;
+
+    max-width: 750px;
+
+    font-size: 21px;
+    line-height: 1.7;
+
+    opacity: 0.7;
+}
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+.research-tags span {
+    padding: 9px 14px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    font-size: 12px;
+    letter-spacing: 1.8px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   HERO QUOTE
+========================================================= */
+
+.hero-quote {
+    position: absolute;
+
+    right: -30vw;
+    bottom: -10vh;
+
+    z-index: 5;
+
+    text-align: right;
+}
+
+.quote-mark {
+    display: block;
+
+    font-size: 30px;
+
+    line-height: 0.8;
+
+    opacity: 0.2;
+}
+
+.hero-quote p {
+    font-size: 20px;
+
+    line-height: 1.28;
+
+    font-weight: 400;
+}
+
+.hero-quote small {
+    display: block;
+
+    margin-top: 14px;
+
+    font-size: 13px;
+
+    letter-spacing: 2.5px;
+
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    left: 8vw;
+    bottom: -100px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    z-index: 5;
+}
+
+.scroll-indicator span {
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    opacity: 0.5;
+}
+
+.scroll-circle {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+.section {
+    min-height: 100vh;
+
+    padding: 160px 8vw;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    position: relative;
+}
+
+.section-number {
+    position: absolute;
+
+    top: 40px;
+    right: 8vw;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.35;
+}
+
+.section-label {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.45;
+
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: clamp(60px, 9vw, 150px);
+
+    letter-spacing: -4px;
+
+    line-height: 0.9;
+
+    margin-bottom: 50px;
+}
+
+.section > p:last-child {
+    max-width: 700px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .hero h1 {
+        font-size: 17vw;
+        letter-spacing: -3px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .hero-quote {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        margin-top: 80px;
+
+        text-align: left;
+    }
+
+    .hero-quote p {
+        font-size: 28px;
+    }
+
+    .scroll-indicator {
+        left: 6vw;
+    }
+
+    .section {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+}
+
+/* =========================================================
+   HERO — SCIENTIFIC VISUAL
+========================================================= */
+
+/* =========================================================
+   CINEMATIC HERO — THz / SPIN PRECESSION
+========================================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+
+/* ---------------------------------------------------------
+   DYNAMIC CANVAS
+--------------------------------------------------------- */
+
+.spin-canvas {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    opacity: 0.95;
+}
+
+
+/* ---------------------------------------------------------
+   HERO CONTENT
+--------------------------------------------------------- */
+
+.hero-content {
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* ---------------------------------------------------------
+   SPIN STORY
+--------------------------------------------------------- */
+
+.spin-story {
+    position: absolute;
+
+    right: 4vw;
+    top: 17vh;
+
+    z-index: 12;
+
+    width: 180px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    line-height: 1.8;
+}
+
+.spin-story .story-line {
+    display: block;
+
+    width: 1px;
+    height: 42px;
+
+    margin-bottom: 18px;
+
+    background: rgba(255,255,255,0.45);
+}
+
+.spin-story p {
+    margin: 0;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    line-height: 1.8;
+}
+
+.story-divider {
+    display: block;
+
+    width: 1px;
+    height: 35px;
+
+    margin: 16px 0;
+
+    background: rgba(255,255,255,0.25);
+}
+
+.spin-story small {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    line-height: 2;
+
+    opacity: 0.6;
+}
+
+
+/* ---------------------------------------------------------
+   SCIENTIFIC GLOW
+--------------------------------------------------------- */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    right: -120px;
+    top: 5%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(40,100,180,0.12) 0%,
+            rgba(20,60,120,0.06) 30%,
+            transparent 70%
+        );
+
+    filter: blur(30px);
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   DEPTH VIGNETTE
+--------------------------------------------------------- */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 70% 45%,
+            transparent 0%,
+            rgba(5,5,5,0.08) 35%,
+            rgba(5,5,5,0.58) 80%,
+            #050505 100%
+        );
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   KEEP CONTENT ABOVE VISUAL
+--------------------------------------------------------- */
+
+.hero-content,
+.hero-quote,
+.scroll-indicator,
+.spin-story {
+    z-index: 10;
+}
+
+
+/* ---------------------------------------------------------
+   DESKTOP
+--------------------------------------------------------- */
+
+@media (min-width: 901px) {
+
+    .spin-canvas {
+        left: 25%;
+        width: 75%;
+    }
+
+    .hero-content {
+        width: 67%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .spin-canvas {
+        opacity: 0.55;
+    }
+
+    .spin-story {
+        right: 6vw;
+        top: 18vh;
+
+        transform: scale(0.8);
+
+        transform-origin: top right;
+    }
+
+}
+
+
+/* =========================================================
+   ABOUT — EDITORIAL SCIENTIFIC SECTION
+========================================================= */
+
+.about-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 150px 8vw 90px;
+
+    overflow: hidden;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(35,80,140,0.07),
+            transparent 32%
+        );
+}
+
+
+/* ---------------------------------------------------------
+   SECTION NUMBER
+--------------------------------------------------------- */
+
+.about-number {
+    position: absolute;
+
+    top: 45px;
+    right: 8vw;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.35;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+.about-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 80px;
+}
+
+.about-label {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.5;
+}
+
+.about-line {
+    width: 100px;
+    height: 1px;
+
+    background: rgba(255,255,255,0.25);
+}
+
+
+/* ---------------------------------------------------------
+   MAIN LAYOUT
+--------------------------------------------------------- */
+
+.about-main {
+    position: relative;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(320px, 0.75fr);
+
+    gap: 8vw;
+
+    max-width: 1450px;
+}
+
+
+/* ---------------------------------------------------------
+   LARGE STATEMENT
+--------------------------------------------------------- */
+
+.about-statement h2 {
+    margin: 0;
+
+    font-size: clamp(60px, 7.5vw, 125px);
+
+    line-height: 0.92;
+
+    letter-spacing: -5px;
+
+    font-weight: 500;
+}
+
+.about-statement em {
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+
+    opacity: 0.65;
+}
+
+
+/* ---------------------------------------------------------
+   TEXT
+--------------------------------------------------------- */
+
+.about-text {
+    padding-top: 8px;
+
+    max-width: 620px;
+}
+
+.about-text p {
+    margin-bottom: 30px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.58);
+}
+
+.about-text .about-lead {
+    margin-bottom: 38px;
+
+    font-size: 21px;
+
+    line-height: 1.65;
+
+    color: rgba(255,255,255,0.88);
+}
+
+
+/* ---------------------------------------------------------
+   SCIENTIFIC VISUAL
+--------------------------------------------------------- */
+
+.about-visual {
+    position: absolute;
+
+    right: -80px;
+    bottom: 80px;
+
+    width: 520px;
+    height: 520px;
+
+    opacity: 0.55;
+
+    pointer-events: none;
+}
+
+
+/* orbit rings */
+
+.about-orbit {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    border: 1px solid rgba(100,160,230,0.15);
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-25deg);
+
+    animation:
+        aboutOrbit 14s linear infinite;
+}
+
+.orbit-one {
+    width: 430px;
+    height: 170px;
+}
+
+.orbit-two {
+    width: 360px;
+    height: 145px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(35deg);
+
+    animation-duration: 18s;
+    animation-direction: reverse;
+}
+
+.orbit-three {
+    width: 280px;
+    height: 110px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(80deg);
+
+    animation-duration: 11s;
+}
+
+@keyframes aboutOrbit {
+
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+
+/* central glow */
+
+.about-core {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(180,220,255,0.9);
+
+    box-shadow:
+        0 0 15px rgba(100,180,255,0.8),
+        0 0 60px rgba(60,130,220,0.3);
+
+    animation: corePulse 3s ease-in-out infinite;
+}
+
+@keyframes corePulse {
+
+    0%, 100% {
+        transform:
+            translate(-50%, -50%)
+            scale(0.7);
+
+        opacity: 0.5;
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.4);
+
+        opacity: 1;
+    }
+}
+
+
+/* particles */
+
+.about-particle {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: rgba(180,220,255,0.8);
+
+    box-shadow:
+        0 0 12px rgba(100,170,255,0.7);
+
+    animation:
+        particleFloat 5s ease-in-out infinite;
+}
+
+.particle-one {
+    left: 18%;
+    top: 30%;
+}
+
+.particle-two {
+    right: 20%;
+    top: 35%;
+
+    animation-delay: 1.5s;
+}
+
+.particle-three {
+    left: 65%;
+    bottom: 20%;
+
+    animation-delay: 3s;
+}
+
+@keyframes particleFloat {
+
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0.25;
+    }
+
+    50% {
+        transform: translate(15px, -20px);
+        opacity: 0.9;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+
+.about-footer {
+    position: absolute;
+
+    left: 8vw;
+    right: 8vw;
+    bottom: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+}
+
+.about-footer > span {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+
+    opacity: 0.35;
+}
+
+.about-footer a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.7;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.about-footer a span {
+    margin-left: 12px;
+
+    font-size: 18px;
+}
+
+.about-footer a:hover {
+    opacity: 1;
+
+    transform: translateX(6px);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        padding: 120px 6vw 120px;
+    }
+
+    .about-header {
+        margin-bottom: 55px;
+    }
+
+    .about-main {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .about-statement h2 {
+        font-size: 16vw;
+
+        letter-spacing: -3px;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-text .about-lead {
+        font-size: 19px;
+    }
+
+    .about-visual {
+        right: -190px;
+        bottom: 80px;
+
+        transform: scale(0.65);
+
+        transform-origin: center;
+    }
+
+    .about-footer {
+        left: 6vw;
+        right: 6vw;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SECTION 02 — RESEARCH
+   CINEMATIC SCIENTIFIC EDITORIAL DESIGN
+========================================================= */
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+/* =========================================================
+   SECTION 02 — RESEARCH
+   CINEMATIC SCIENTIFIC EDITORIAL DESIGN
+========================================================= */
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.research-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        145px
+        7.5vw
+        85px;
+
+    overflow: hidden;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(35,75,120,0.035),
+            transparent 45%
+        );
+
+}
+
+
+/* =========================================================
+   SECTION NUMBER
+========================================================= */
+
+.research-number {
+
+    position: absolute;
+
+    top: 32px;
+
+    right: 7.5vw;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color:
+        rgba(255,255,255,0.45);
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.research-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.research-header > span {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color:
+        rgba(255,255,255,0.62);
+
+}
+
+
+.research-header-line {
+
+    width: 145px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.35);
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.research-intro {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 80px;
+
+    margin-bottom: 48px;
+
+}
+
+
+.research-intro h2 {
+
+    margin: 0;
+
+    font-size:
+        clamp(
+            58px,
+            6.2vw,
+            100px
+        );
+
+    line-height: 0.92;
+
+    letter-spacing: -5px;
+
+    font-weight: 450;
+
+    color:
+        rgba(255,255,255,0.96);
+
+}
+
+
+.research-intro h2 em {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 400;
+
+    color:
+        rgba(255,255,255,0.55);
+
+}
+
+
+.research-intro > p {
+
+    width: 390px;
+
+    margin: 0 0 7px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color:
+        rgba(255,255,255,0.56);
+
+}
+
+
+/* =========================================================
+   THREE COLUMN GRID
+========================================================= */
+
+.research-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    width: 100%;
+
+    border:
+        1px solid rgba(255,255,255,0.13);
+
+    background:
+        rgba(255,255,255,0.10);
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.research-card {
+
+    position: relative;
+
+    height: 525px;
+
+    overflow: hidden;
+
+    background:
+        #050607;
+
+    border-right:
+        1px solid rgba(255,255,255,0.12);
+
+    transition:
+        background 0.5s ease;
+
+}
+
+
+.research-card:last-child {
+
+    border-right: none;
+
+}
+
+
+.research-card:hover {
+
+    background:
+        #07090c;
+
+}
+
+
+/* lower fade */
+
+.research-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 48%;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(3,4,5,0.90)
+        );
+
+    z-index: 6;
+
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.card-number {
+
+    position: absolute;
+
+    top: 24px;
+
+    right: 27px;
+
+    z-index: 30;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(255,255,255,0.45);
+
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.card-content {
+
+    position: absolute;
+
+    left: 39px;
+
+    right: 34px;
+
+    bottom: 31px;
+
+    z-index: 20;
+
+}
+
+
+.card-kicker {
+
+    display: block;
+
+    margin-bottom: 13px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(255,255,255,0.47);
+
+}
+
+
+.card-content h3 {
+
+    margin: 0 0 17px;
+
+    font-size:
+        clamp(
+            37px,
+            3vw,
+            52px
+        );
+
+    line-height: 0.89;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 450;
+
+    color:
+        rgba(255,255,255,0.96);
+
+}
+
+
+.card-content p {
+
+    max-width: 350px;
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    color:
+        rgba(255,255,255,0.52);
+
+}
+
+
+/* =========================================================
+   CARD ARROW
+========================================================= */
+
+.card-arrow {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 49px;
+
+    height: 49px;
+
+    border:
+        1px solid rgba(255,255,255,0.55);
+
+    border-radius: 50%;
+
+    background:
+        transparent;
+
+    color:
+        rgba(255,255,255,0.95);
+
+    font-size: 20px;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.research-card:hover .card-arrow {
+
+    transform:
+        translate(3px,-3px);
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-color:
+        rgba(255,255,255,0.8);
+
+}
+
+
+/* =========================================================
+   01 — THz SPECTROSCOPY
+========================================================= */
+
+.thz-visual {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 40px;
+
+    height: 275px;
+
+    overflow: hidden;
+
+    z-index: 3;
+
+}
+
+
+/* =========================================================
+   MAIN THz PULSE
+========================================================= */
+
+.thz-pulse-main {
+
+    position: absolute;
+
+    left: -8%;
+
+    top: 45px;
+
+    width: 116%;
+
+    height: 120px;
+
+    filter:
+        drop-shadow(
+            0 0 9px
+            rgba(75,170,255,0.9)
+        );
+
+    animation:
+        thzPulseMove
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.thz-pulse-main svg {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+.thz-pulse-main path {
+
+    fill: none;
+
+    stroke:
+        rgba(105,190,255,0.98);
+
+    stroke-width: 2.7;
+
+    stroke-linecap: round;
+
+}
+
+
+/* =========================================================
+   SECONDARY WAVEFORMS
+========================================================= */
+
+.thz-wave {
+
+    position: absolute;
+
+    left: -5%;
+
+    width: 110%;
+
+    height: 70px;
+
+}
+
+
+.thz-wave svg {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+.thz-wave path {
+
+    fill: none;
+
+    stroke-linecap: round;
+
+}
+
+
+/* waveform 1 */
+
+.wave-one {
+
+    top: 18px;
+
+    opacity: 0.25;
+
+    filter:
+        drop-shadow(
+            0 0 5px
+            rgba(60,150,255,0.55)
+        );
+
+    animation:
+        waveDriftOne
+        7s
+        ease-in-out
+        infinite;
+
+}
+
+
+.wave-one path {
+
+    stroke:
+        rgba(80,165,255,0.9);
+
+    stroke-width: 1.1;
+
+}
+
+
+/* waveform 2 */
+
+.wave-two {
+
+    top: 122px;
+
+    opacity: 0.34;
+
+    filter:
+        drop-shadow(
+            0 0 5px
+            rgba(70,160,255,0.55)
+        );
+
+    animation:
+        waveDriftTwo
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.wave-two path {
+
+    stroke:
+        rgba(90,175,255,0.78);
+
+    stroke-width: 1.2;
+
+}
+
+
+/* waveform 3 */
+
+.wave-three {
+
+    top: 180px;
+
+    opacity: 0.16;
+
+    animation:
+        waveDriftThree
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.wave-three path {
+
+    stroke:
+        rgba(90,165,240,0.7);
+
+    stroke-width: 1;
+
+}
+
+
+/* =========================================================
+   THz REFERENCE AXIS
+========================================================= */
+
+.thz-axis {
+
+    position: absolute;
+
+    left: 7%;
+
+    right: 7%;
+
+    top: 112px;
+
+    height: 1px;
+
+    background:
+        rgba(100,170,230,0.12);
+
+}
+
+
+/* =========================================================
+   THz ANIMATION
+========================================================= */
+
+@keyframes thzPulseMove {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-12px)
+            scaleY(0.94);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(12px)
+            scaleY(1.05);
+
+    }
+
+}
+
+
+@keyframes waveDriftOne {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-8px);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(12px);
+
+    }
+
+}
+
+
+@keyframes waveDriftTwo {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(10px);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-10px);
+
+    }
+
+}
+
+
+@keyframes waveDriftThree {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-5px);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(8px);
+
+    }
+
+}
+
+
+/* =========================================================
+   02 — MAGNETISM
+========================================================= */
+
+.magnetism-visual {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 35px;
+
+    height: 275px;
+
+    z-index: 3;
+
+}
+
+
+/* =========================================================
+   ELECTROMAGNETIC EXCITATION
+========================================================= */
+
+.em-excitation {
+
+    position: absolute;
+
+    left: 25px;
+
+    top: 105px;
+
+    width: 145px;
+
+    height: 85px;
+
+    transform:
+        rotate(-8deg);
+
+    opacity: 0.75;
+
+}
+
+
+.em-excitation span {
+
+    position: absolute;
+
+    left: 0;
+
+    width: 145px;
+
+    height: 65px;
+
+    border-top:
+        1.5px solid
+        rgba(65,155,255,0.85);
+
+    border-radius: 50%;
+
+    animation:
+        emWaveMotion
+        2.4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.em-excitation span:nth-child(2) {
+
+    top: 10px;
+
+    opacity: 0.42;
+
+    animation-delay:
+        0.2s;
+
+}
+
+
+.em-excitation span:nth-child(3) {
+
+    top: 20px;
+
+    opacity: 0.18;
+
+    animation-delay:
+        0.4s;
+
+}
+
+
+@keyframes emWaveMotion {
+
+    0%,
+    100% {
+
+        transform:
+            scaleY(0.65);
+
+    }
+
+    50% {
+
+        transform:
+            scaleY(1.4);
+
+    }
+
+}
+
+
+/* =========================================================
+   SPINS
+========================================================= */
+
+.spin-system {
+
+    position: absolute;
+
+    width: 130px;
+
+    height: 190px;
+
+    text-align: center;
+
+}
+
+
+.spin-one {
+
+    left: 29%;
+
+    top: 67px;
+
+}
+
+
+.spin-two {
+
+    right: 14%;
+
+    top: 58px;
+
+}
+
+
+.spin-name {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 35px;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color:
+        rgba(255,255,255,0.85);
+
+}
+
+
+.spin-system small {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 8px;
+
+    width: 120px;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 8px;
+
+    letter-spacing: 2.5px;
+
+    color:
+        rgba(255,255,255,0.52);
+
+}
+
+
+/* =========================================================
+   M1 — ALIGNED
+========================================================= */
+
+.spin-one .spin-axis {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    width: 1px;
+
+    height: 105px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            to top,
+            transparent,
+            rgba(255,255,255,0.28),
+            transparent
+        );
+
+}
+
+
+.spin-arrow {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 8px;
+
+    width: 3px;
+
+    height: 91px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(60,145,255,0.25),
+            rgba(90,180,255,1)
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(65,160,255,0.75);
+
+}
+
+
+.spin-arrow::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -7px;
+
+    top: -4px;
+
+    border-left:
+        8px solid transparent;
+
+    border-right:
+        8px solid transparent;
+
+    border-bottom:
+        15px solid
+        rgba(105,190,255,1);
+
+}
+
+
+/* =========================================================
+   M2 — PRECESSION
+========================================================= */
+
+.precession-cone {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50px;
+
+    width: 112px;
+
+    height: 95px;
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+/* upper ellipse */
+
+.cone-top {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    width: 112px;
+
+    height: 36px;
+
+    transform:
+        translateX(-50%);
+
+    border:
+        1.3px solid
+        rgba(240,176,76,0.78);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 13px
+        rgba(235,165,55,0.15);
+
+    animation:
+        coneOrbit
+        3s
+        linear
+        infinite;
+
+}
+
+
+/* lower ellipse */
+
+.cone-bottom {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 72px;
+
+    height: 23px;
+
+    transform:
+        translateX(-50%);
+
+    border:
+        1px solid
+        rgba(240,176,76,0.42);
+
+    border-radius: 50%;
+
+}
+
+
+/* cone sides */
+
+.precession-cone::before,
+.precession-cone::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 15px;
+
+    width: 1px;
+
+    height: 70px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(240,176,76,0.48),
+            rgba(240,176,76,0.10)
+        );
+
+}
+
+
+.precession-cone::before {
+
+    left: 19px;
+
+    transform:
+        rotate(-23deg);
+
+}
+
+
+.precession-cone::after {
+
+    right: 19px;
+
+    transform:
+        rotate(23deg);
+
+}
+
+
+/* ring motion */
+
+@keyframes coneOrbit {
+
+    0% {
+
+        transform:
+            translateX(-50%)
+            rotateX(0deg)
+            scaleX(1);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            rotateX(180deg)
+            scaleX(0.72);
+
+    }
+
+    100% {
+
+        transform:
+            translateX(-50%)
+            rotateX(360deg)
+            scaleX(1);
+
+    }
+
+}
+
+
+/* fixed axis */
+
+.precession-axis {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 25px;
+
+    width: 1px;
+
+    height: 100px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.4),
+            rgba(255,255,255,0.05)
+        );
+
+}
+
+
+/* rotating vector */
+
+.precessing-vector {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 48px;
+
+    width: 3px;
+
+    height: 78px;
+
+    transform-origin:
+        50% 100%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(255,170,55,0.20),
+            rgba(255,195,95,1)
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(255,175,55,0.75);
+
+    animation:
+        spinPrecession
+        2.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+.precessing-vector::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -7px;
+
+    top: -4px;
+
+    border-left:
+        8px solid transparent;
+
+    border-right:
+        8px solid transparent;
+
+    border-bottom:
+        15px solid
+        rgba(255,195,95,1);
+
+}
+
+
+@keyframes spinPrecession {
+
+    0% {
+
+        transform:
+            rotate(-30deg);
+
+    }
+
+    50% {
+
+        transform:
+            rotate(30deg);
+
+    }
+
+    100% {
+
+        transform:
+            rotate(-30deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   03 — MATERIALS SCIENCE
+========================================================= */
+
+.material-visual {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 30px;
+
+    height: 300px;
+
+    z-index: 3;
+
+}
+
+
+.material-cube {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 75px;
+
+    width: 225px;
+
+    height: 175px;
+
+    transform:
+
+        translateX(-50%)
+
+        perspective(750px)
+
+        rotateX(58deg)
+
+        rotateZ(-22deg);
+
+    transform-style:
+        preserve-3d;
+
+    animation:
+        materialFloat
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =========================================================
+   LATTICE LAYERS
+========================================================= */
+
+.lattice-layer {
+
+    position: absolute;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 27px;
+
+    width: 210px;
+
+    height: 150px;
+
+    transform-style:
+        preserve-3d;
+
+}
+
+
+.lattice-back {
+
+    transform:
+        translateZ(-55px)
+        scale(0.78);
+
+    opacity: 0.25;
+
+}
+
+
+.lattice-middle {
+
+    transform:
+        translateZ(0);
+
+    opacity: 0.60;
+
+}
+
+
+.lattice-front {
+
+    transform:
+        translateZ(55px);
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+   ATOMS
+========================================================= */
+
+.lattice-layer span {
+
+    position: relative;
+
+    display: block;
+
+    width: 13px;
+
+    height: 13px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #eefaff 0%,
+            #62a6e0 32%,
+            #1b456d 72%,
+            #0b1724 100%
+        );
+
+    box-shadow:
+        0 0 13px
+        rgba(75,160,240,0.50);
+
+    animation:
+        atomFloat
+        3.8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* warm nodes */
+
+.lattice-middle span:nth-child(3n) {
+
+    width: 15px;
+
+    height: 15px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #fff0d7 0%,
+            #d69c50 35%,
+            #69411c 75%,
+            #21150a 100%
+        );
+
+    box-shadow:
+        0 0 14px
+        rgba(220,155,70,0.46);
+
+}
+
+
+/* red nodes */
+
+.lattice-front span:nth-child(4n) {
+
+    width: 12px;
+
+    height: 12px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #ffe9eb 0%,
+            #cc5f67 35%,
+            #641e28 75%,
+            #210b10 100%
+        );
+
+    box-shadow:
+        0 0 14px
+        rgba(220,75,85,0.46);
+
+}
+
+
+@keyframes atomFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateZ(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateZ(5px);
+
+    }
+
+}
+
+
+/* =========================================================
+   CENTRAL ATOMS
+========================================================= */
+
+.lattice-center {
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    z-index: 20;
+
+    box-shadow:
+        0 0 18px
+        rgba(255,255,255,0.25);
+
+}
+
+
+.center-one {
+
+    left: 45%;
+
+    top: 35%;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #f0fbff,
+            #5d9ed3 40%,
+            #1b3c5e
+        );
+
+}
+
+
+.center-two {
+
+    left: 63%;
+
+    top: 55%;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #fff0d4,
+            #d59b4e 40%,
+            #69401b
+        );
+
+}
+
+
+.center-three {
+
+    left: 30%;
+
+    top: 58%;
+
+    width: 14px;
+
+    height: 14px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #ffe7e9,
+            #c85a63 40%,
+            #5a2028
+        );
+
+}
+
+
+/* =========================================================
+   LATTICE FRAME
+========================================================= */
+
+.lattice-frame {
+
+    position: absolute;
+
+    border:
+        1px solid
+        rgba(110,180,230,0.22);
+
+    pointer-events: none;
+
+}
+
+
+.frame-one {
+
+    inset: 0;
+
+}
+
+
+.frame-two {
+
+    inset: 18px;
+
+    transform:
+        translateZ(-55px);
+
+    opacity: 0.45;
+
+}
+
+
+.frame-three {
+
+    left: 0;
+
+    right: 0;
+
+    top: 50%;
+
+    height: 1px;
+
+    transform:
+        translateZ(55px);
+
+    background:
+        rgba(110,180,230,0.20);
+
+}
+
+
+/* lattice movement */
+
+@keyframes materialFloat {
+
+    0%,
+    100% {
+
+        transform:
+
+            translateX(-50%)
+
+            perspective(750px)
+
+            rotateX(58deg)
+
+            rotateZ(-22deg)
+
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+
+            translateX(-50%)
+
+            perspective(750px)
+
+            rotateX(54deg)
+
+            rotateZ(-18deg)
+
+            translateY(-8px);
+
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .research-card {
+
+        height: 545px;
+
+    }
+
+    .thz-visual,
+    .magnetism-visual,
+    .material-visual {
+
+        transform:
+            scale(1.08);
+
+        transform-origin:
+            center top;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .research-section {
+
+        padding:
+            125px
+            5vw
+            75px;
+
+    }
+
+
+    .research-intro {
+
+        gap: 45px;
+
+    }
+
+
+    .research-intro h2 {
+
+        font-size:
+            clamp(
+                50px,
+                6.5vw,
+                80px
+            );
+
+    }
+
+
+    .research-intro > p {
+
+        width: 330px;
+
+        font-size: 14px;
+
+    }
+
+
+    .research-card {
+
+        height: 500px;
+
+    }
+
+
+    .card-content {
+
+        left: 28px;
+
+        right: 27px;
+
+    }
+
+
+    .card-content h3 {
+
+        font-size: 38px;
+
+    }
+
+
+    .card-content p {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .research-section {
+
+        padding:
+            110px
+            6vw
+            75px;
+
+    }
+
+
+    .research-number {
+
+        right: 6vw;
+
+    }
+
+
+    .research-intro {
+
+        display: block;
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .research-intro h2 {
+
+        font-size:
+            clamp(
+                48px,
+                13vw,
+                72px
+            );
+
+        letter-spacing:
+            -3px;
+
+    }
+
+
+    .research-intro > p {
+
+        width: auto;
+
+        max-width: 500px;
+
+        margin-top: 30px;
+
+    }
+
+
+    .research-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .research-card {
+
+        height: 500px;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,0.12);
+
+    }
+
+
+    .research-card:last-child {
+
+        border-bottom: none;
+
+    }
+
+
+    .research-focus {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 14px;
+
+    }
+
+
+    .focus-line {
+
+        display: none;
+
+    }
+
+
+    .thz-visual,
+    .magnetism-visual,
+    .material-visual {
+
+        transform:
+            scale(0.92);
+
+        transform-origin:
+            center top;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .research-section {
+
+        padding:
+            95px
+            5vw
+            60px;
+
+    }
+
+
+    .research-header {
+
+        gap: 15px;
+
+    }
+
+
+    .research-header-line {
+
+        width: 70px;
+
+    }
+
+
+    .research-card {
+
+        height: 475px;
+
+    }
+
+
+    .card-content {
+
+        left: 23px;
+
+        right: 22px;
+
+        bottom: 25px;
+
+    }
+
+
+    .card-content h3 {
+
+        font-size: 36px;
+
+    }
+
+
+    .card-arrow {
+
+        width: 43px;
+
+        height: 43px;
+
+    }
+
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+========================================================= */
+
+.publications-section {
+    position: relative;
+
+    background: #050505;
+    color: #f2f2f2;
+
+    padding: 150px 7vw 150px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION NUMBER
+--------------------------------------------------------- */
+
+.publications-number {
+    position: absolute;
+
+    top: 55px;
+    right: 7vw;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+.publications-header {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 80px;
+}
+
+.publications-header span {
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    white-space: nowrap;
+}
+
+.publications-header-line {
+    width: 120px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ---------------------------------------------------------
+   MAIN INTRO
+--------------------------------------------------------- */
+
+.publications-intro {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 8vw;
+
+    align-items: end;
+
+    min-height: 390px;
+}
+
+
+/* ---------------------------------------------------------
+   TITLE
+--------------------------------------------------------- */
+
+.publications-title h2 {
+    margin: 0;
+
+    font-size: clamp(58px, 6.5vw, 105px);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    letter-spacing: -4px;
+}
+
+.publications-title h2 em {
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.42);
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------------- */
+
+.publications-description {
+    padding-bottom: 8px;
+}
+
+.publications-description p {
+    max-width: 500px;
+
+    margin: 0 0 45px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ---------------------------------------------------------
+   GOOGLE SCHOLAR BUTTON
+--------------------------------------------------------- */
+
+.scholar-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 17px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: rgba(255, 255, 255, 0.85);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2.2px;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        gap 0.35s ease;
+}
+
+.scholar-arrow {
+    font-size: 17px;
+
+    line-height: 1;
+
+    transition: transform 0.35s ease;
+}
+
+.scholar-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(255, 255, 255, 0.5);
+
+    color: #ffffff;
+
+    gap: 28px;
+}
+
+.scholar-button:hover .scholar-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* ---------------------------------------------------------
+   BOTTOM INFORMATION LINE
+--------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------
+   SCIENTIFIC DECORATION
+--------------------------------------------------------- */
+
+.publications-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -170px;
+    top: 80px;
+
+    border: 1px solid rgba(255, 255, 255, 0.035);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.publications-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 240px;
+
+    right: 11vw;
+    top: 145px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 255, 255, 0.12),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .publications-section {
+        padding: 120px 6vw 130px;
+    }
+
+    .publications-intro {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        min-height: auto;
+    }
+
+    .publications-description {
+        padding-bottom: 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .publications-section {
+        padding: 100px 6vw 110px;
+    }
+
+    .publications-number {
+        top: 35px;
+        right: 6vw;
+    }
+
+    .publications-header {
+        margin-bottom: 55px;
+    }
+
+    .publications-title h2 {
+        font-size: clamp(48px, 13vw, 75px);
+
+        letter-spacing: -2.5px;
+    }
+
+    .publications-description p {
+        font-size: 16px;
+
+        margin-bottom: 35px;
+    }
+
+    
+
+    .publications-section::before {
+        width: 280px;
+        height: 280px;
+
+        right: -150px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .publications-title h2 {
+        font-size: 46px;
+    }
+
+    .scholar-button {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+}
+
+/* =========================================================
+   EXPERIENCE SECTION
+========================================================= */
+
+.experience-section {
+    position: relative;
+
+    background: #050505;
+    color: #f2f2f2;
+
+    padding: 150px 7vw 170px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION NUMBER
+--------------------------------------------------------- */
+
+.experience-number {
+    position: absolute;
+
+    top: 55px;
+    right: 7vw;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
+.experience-header {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 80px;
+}
+
+.experience-header span {
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    white-space: nowrap;
+}
+
+.experience-header-line {
+    width: 120px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+--------------------------------------------------------- */
+
+.experience-intro {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 8vw;
+
+    align-items: end;
+
+    margin-bottom: 115px;
+}
+
+.experience-intro h2 {
+    margin: 0;
+
+    font-size: clamp(60px, 6.5vw, 105px);
+
+    line-height: 0.94;
+
+    font-weight: 400;
+
+    letter-spacing: -4px;
+}
+
+.experience-intro h2 em {
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.experience-intro p {
+    max-width: 500px;
+
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.experience-timeline {
+    position: relative;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* ---------------------------------------------------------
+   CENTRAL TIMELINE LINE
+--------------------------------------------------------- */
+
+.experience-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 250px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   EXPERIENCE ITEM
+--------------------------------------------------------- */
+
+.experience-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 190px 120px 1fr;
+
+    min-height: 300px;
+
+    padding-bottom: 85px;
+}
+
+
+/* ---------------------------------------------------------
+   YEAR
+--------------------------------------------------------- */
+
+.experience-year {
+    padding-top: 4px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    text-align: right;
+}
+
+
+/* ---------------------------------------------------------
+   TIMELINE MARKER
+--------------------------------------------------------- */
+
+.experience-marker {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.experience-marker span {
+    position: relative;
+
+    z-index: 2;
+
+    width: 10px;
+    height: 10px;
+
+    margin-top: 7px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    background: #050505;
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* current position gets a slightly stronger marker */
+
+.experience-current .experience-marker span {
+    width: 13px;
+    height: 13px;
+
+    margin-top: 5px;
+
+    border-color: rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 0 0 6px rgba(255, 255, 255, 0.035);
+}
+
+
+/* ---------------------------------------------------------
+   CONTENT
+--------------------------------------------------------- */
+
+.experience-content {
+    padding-left: 20px;
+
+    max-width: 780px;
+}
+
+.experience-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 22px;
+}
+
+.experience-type {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.experience-location {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* ---------------------------------------------------------
+   INSTITUTION
+--------------------------------------------------------- */
+
+.experience-content h3 {
+    margin: 0 0 12px;
+
+    font-size: clamp(28px, 3vw, 46px);
+
+    line-height: 1.1;
+
+    font-weight: 400;
+
+    letter-spacing: -1.5px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    transition: color 0.3s ease;
+}
+
+
+/* ---------------------------------------------------------
+   ROLE
+--------------------------------------------------------- */
+
+.experience-content h4 {
+    margin: 0 0 25px;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------------- */
+
+.experience-content p {
+    max-width: 700px;
+
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.85;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+--------------------------------------------------------- */
+
+.experience-item:hover .experience-marker span {
+    transform: scale(1.6);
+
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.experience-item:hover .experience-content h3 {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   CURRENT RESEARCH EMPHASIS
+========================================================= */
+
+.experience-current {
+    min-height: 350px;
+}
+
+.experience-current .experience-content {
+    position: relative;
+}
+
+
+
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+========================================================= */
+
+.experience-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -250px;
+    top: 100px;
+
+    border: 1px solid rgba(255, 255, 255, 0.025);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.experience-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 260px;
+
+    right: 11vw;
+    top: 170px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .experience-section {
+        padding: 120px 6vw 140px;
+    }
+
+    .experience-intro {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-bottom: 90px;
+    }
+
+    .experience-timeline::before {
+        left: 170px;
+    }
+
+    .experience-item {
+        grid-template-columns: 130px 80px 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .experience-section {
+        padding: 100px 6vw 110px;
+    }
+
+    .experience-number {
+        top: 35px;
+        right: 6vw;
+    }
+
+    .experience-header {
+        margin-bottom: 55px;
+    }
+
+    .experience-intro {
+        margin-bottom: 75px;
+    }
+
+    .experience-intro h2 {
+        font-size: clamp(48px, 13vw, 75px);
+
+        letter-spacing: -2.5px;
+    }
+
+    .experience-intro p {
+        font-size: 16px;
+    }
+
+
+    /* Convert timeline into a compact mobile layout */
+
+    .experience-timeline::before {
+        left: 7px;
+    }
+
+    .experience-item {
+        display: grid;
+
+        grid-template-columns: 30px 1fr;
+
+        gap: 25px;
+
+        min-height: auto;
+
+        padding-bottom: 70px;
+    }
+
+    .experience-year {
+        grid-column: 1 / -1;
+
+        padding: 0;
+
+        text-align: left;
+
+        margin-bottom: -10px;
+
+        font-size: 11px;
+
+        line-height: 1.5;
+
+        padding-left: 32px;
+    }
+
+    .experience-marker {
+        grid-column: 1;
+
+        grid-row: 2;
+
+        justify-content: flex-start;
+    }
+
+    .experience-marker span {
+        margin-top: 7px;
+
+        margin-left: 2px;
+    }
+
+    .experience-content {
+        grid-column: 2;
+
+        padding-left: 0;
+    }
+
+    .experience-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        margin-bottom: 18px;
+    }
+
+    .experience-content h3 {
+        font-size: 29px;
+
+        letter-spacing: -1px;
+    }
+
+    .experience-content h4 {
+        font-size: 11px;
+
+        margin-bottom: 20px;
+    }
+
+    .experience-content p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .experience-current {
+        min-height: auto;
+    }
+
+   /* CLOSE EXPERIENCE MOBILE MEDIA QUERY */
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .experience-section {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .experience-intro h2 {
+        font-size: 46px;
+    }
+
+    .experience-content h3 {
+        font-size: 25px;
+    }
+
+}
+
+/* =========================================================
+   EXPERIMENTAL TOOLKIT
+   Scientific Research Map
+========================================================= */
+
+.experimental-toolkit {
+    position: relative;
+    min-height: 900px;
+    padding: 170px 7vw 140px;
+
+    background: #050505;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.toolkit-section-number {
+    position: absolute;
+    top: 145px;
+    left: 7vw;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.32);
+}
+
+.toolkit-title {
+    width: 86%;
+    margin-left: 10%;
+}
+
+.toolkit-title span {
+    display: block;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    color: rgba(255,255,255,0.55);
+}
+
+.toolkit-title-line {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 28px;
+
+    background: rgba(255,255,255,0.13);
+}
+
+.toolkit-subtitle {
+    margin: 38px 0 0 10%;
+
+    font-size: clamp(55px, 7vw, 110px);
+    line-height: 0.9;
+    letter-spacing: -4px;
+    font-weight: 400;
+
+    color: #f1f1f1;
+}
+
+
+/* =========================================================
+   RESEARCH MAP
+========================================================= */
+
+.research-map {
+    position: relative;
+
+    width: min(1100px, 100%);
+    height: 610px;
+
+    margin: 80px auto 0;
+}
+
+
+/* =========================================================
+   CONNECTION SVG
+========================================================= */
+
+.research-connections {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+
+    pointer-events: none;
+}
+
+.connection {
+    stroke: rgba(255,255,255,0.16);
+    stroke-width: 1;
+
+    fill: none;
+
+    transition:
+        stroke 0.5s ease,
+        stroke-width 0.5s ease;
+}
+
+
+/* =========================================================
+   MOVING PARTICLES
+========================================================= */
+
+.map-particle {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,0.7);
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* THz particle */
+
+.particle-thz {
+    left: 29%;
+    top: 29%;
+
+    animation: particleTHz 4s linear infinite;
+}
+
+@keyframes particleTHz {
+
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(195px, 80px);
+        opacity: 0;
+    }
+}
+
+
+/* Magnetism particle */
+
+.particle-magnetism {
+    left: 71%;
+    top: 29%;
+
+    animation: particleMagnetism 4.8s linear infinite 1s;
+}
+
+@keyframes particleMagnetism {
+
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-195px, 80px);
+        opacity: 0;
+    }
+}
+
+
+/* Materials particle */
+
+.particle-materials {
+    left: 29%;
+    top: 70%;
+
+    animation: particleMaterials 4.5s linear infinite 1.5s;
+}
+
+@keyframes particleMaterials {
+
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(195px, -75px);
+        opacity: 0;
+    }
+}
+
+
+/* Analysis particle */
+
+.particle-analysis {
+    left: 71%;
+    top: 70%;
+
+    animation: particleAnalysis 5s linear infinite 2s;
+}
+
+@keyframes particleAnalysis {
+
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-195px, -75px);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   MATTER CORE
+========================================================= */
+
+.matter-core {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 190px;
+    height: 190px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 4;
+}
+
+
+/* central glowing point */
+
+.matter-pulse {
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.9),
+        0 0 45px rgba(255,255,255,0.35);
+
+    animation: matterPulse 3s ease-in-out infinite;
+}
+
+@keyframes matterPulse {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+        opacity: 0.75;
+    }
+
+    50% {
+        transform: scale(1.25);
+        opacity: 1;
+    }
+}
+
+
+/* orbital rings */
+
+.matter-orbit {
+    position: absolute;
+
+    width: 145px;
+    height: 145px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 50%;
+}
+
+.orbit-one {
+    transform: rotateX(67deg);
+    animation: orbitRotateOne 12s linear infinite;
+}
+
+.orbit-two {
+    transform: rotateY(67deg);
+    animation: orbitRotateTwo 16s linear infinite reverse;
+}
+
+@keyframes orbitRotateOne {
+
+    from {
+        transform:
+            rotateX(67deg)
+            rotateZ(0deg);
+    }
+
+    to {
+        transform:
+            rotateX(67deg)
+            rotateZ(360deg);
+    }
+}
+
+@keyframes orbitRotateTwo {
+
+    from {
+        transform:
+            rotateY(67deg)
+            rotateZ(0deg);
+    }
+
+    to {
+        transform:
+            rotateY(67deg)
+            rotateZ(360deg);
+    }
+}
+
+
+/* Matter text */
+
+.matter-label {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: rgba(5,5,5,0.92);
+
+    z-index: 5;
+}
+
+.matter-label span {
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.9);
+}
+
+
+/* =========================================================
+   RESEARCH DOMAINS
+========================================================= */
+
+.research-domain {
+    position: absolute;
+
+    width: 230px;
+
+    z-index: 5;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.research-domain:hover {
+    transform: translateY(-5px);
+}
+
+
+/* positions */
+
+.domain-thz {
+    left: 5%;
+    top: 12%;
+}
+
+.domain-magnetism {
+    right: 5%;
+    top: 12%;
+    text-align: right;
+}
+
+.domain-materials {
+    left: 5%;
+    bottom: 8%;
+}
+
+.domain-analysis {
+    right: 5%;
+    bottom: 8%;
+    text-align: right;
+}
+
+
+/* =========================================================
+   DOMAIN TYPOGRAPHY
+========================================================= */
+
+.domain-number {
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.28);
+}
+
+.research-domain h3 {
+    margin: 0;
+
+    font-size: 25px;
+    line-height: 1;
+
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    color: #eeeeee;
+}
+
+.domain-line {
+    width: 45px;
+    height: 1px;
+
+    margin: 18px 0;
+
+    background: rgba(255,255,255,0.35);
+
+    transition:
+        width 0.4s ease;
+}
+
+.research-domain:hover .domain-line {
+    width: 80px;
+}
+
+.domain-magnetism .domain-line,
+.domain-analysis .domain-line {
+    margin-left: auto;
+}
+
+
+.domain-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.domain-tools span {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+
+    color: rgba(255,255,255,0.38);
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.research-domain:hover .domain-tools span {
+    color: rgba(255,255,255,0.7);
+}
+
+.research-domain:hover .domain-tools span:nth-child(1) {
+    transform: translateX(4px);
+}
+
+.research-domain:hover .domain-tools span:nth-child(2) {
+    transform: translateX(8px);
+}
+
+.research-domain:hover .domain-tools span:nth-child(3) {
+    transform: translateX(12px);
+}
+
+.research-domain:hover .domain-tools span:nth-child(4) {
+    transform: translateX(16px);
+}
+
+
+/* =========================================================
+   SUBTLE BACKGROUND FIELD
+========================================================= */
+
+.experimental-toolkit::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    left: 50%;
+    top: 55%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.025) 0%,
+            rgba(255,255,255,0.01) 35%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .experimental-toolkit {
+        min-height: auto;
+        padding: 120px 25px 100px;
+    }
+
+    .toolkit-section-number {
+        top: 95px;
+        left: 25px;
+    }
+
+    .toolkit-title {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .toolkit-title span {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .toolkit-subtitle {
+        margin-left: 0;
+
+        font-size: clamp(48px, 14vw, 80px);
+
+        letter-spacing: -3px;
+    }
+
+    .research-map {
+        height: 850px;
+
+        margin-top: 70px;
+    }
+
+
+    /* Move domains around central core */
+
+    .domain-thz {
+        left: 0;
+        top: 5%;
+    }
+
+    .domain-magnetism {
+        right: 0;
+        top: 5%;
+    }
+
+    .domain-materials {
+        left: 0;
+        bottom: 5%;
+    }
+
+    .domain-analysis {
+        right: 0;
+        bottom: 5%;
+    }
+
+    .research-domain {
+        width: 150px;
+    }
+
+    .research-domain h3 {
+        font-size: 19px;
+    }
+
+    .domain-tools span {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+    }
+
+    .matter-core {
+        width: 150px;
+        height: 150px;
+    }
+
+    .matter-orbit {
+        width: 120px;
+        height: 120px;
+    }
+
+    .matter-label {
+        width: 75px;
+        height: 75px;
+    }
+
+    .matter-label span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .research-map {
+        height: 900px;
+    }
+
+    .research-domain {
+        width: 135px;
+    }
+
+    .domain-magnetism,
+    .domain-analysis {
+        right: 0;
+    }
+
+    .research-domain h3 {
+        font-size: 17px;
+    }
+
+    .domain-tools span {
+        font-size: 8px;
+    }
+
+    .research-connections {
+        opacity: 0.55;
+    }
+
+}
+/* =========================================================
+   FINAL CONTACT
+========================================================= */
+
+.contact-final {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 160px 7vw 70px;
+
+    background: #050505;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION NUMBER
+========================================================= */
+
+.contact-final-number {
+    position: absolute;
+
+    top: 135px;
+    left: 7vw;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.32);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.contact-final-header {
+    width: 86%;
+    margin-left: 10%;
+}
+
+.contact-final-label {
+    display: block;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    color: rgba(255,255,255,0.55);
+}
+
+.contact-final-line {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 28px;
+
+    background: rgba(255,255,255,0.14);
+}
+
+
+/* =========================================================
+   MAIN MESSAGE
+========================================================= */
+
+.contact-final-main {
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+.contact-final-main h2 {
+    margin: 0;
+
+    font-size: clamp(65px, 9vw, 145px);
+
+    line-height: 0.86;
+
+    letter-spacing: -6px;
+
+    font-weight: 400;
+
+    color: #f2f2f2;
+}
+
+.contact-final-main h2 span {
+    color: rgba(255,255,255,0.22);
+}
+
+
+/* =========================================================
+   CONTACT GRID
+========================================================= */
+
+.contact-final-grid {
+    width: 80%;
+
+    margin: 130px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.5fr
+        0.8fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.contact-final-small {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.38);
+}
+
+.contact-final-intro p,
+.contact-final-location p {
+    margin-top: 14px;
+
+    font-size: 18px;
+
+    color: rgba(255,255,255,0.75);
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+========================================================= */
+
+.contact-final-links {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.contact-final-link {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr 30px;
+
+    align-items: center;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        padding 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.contact-final-link:first-child {
+    border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+
+.contact-final-link:hover {
+    padding-left: 12px;
+
+    border-color: rgba(255,255,255,0.4);
+}
+
+
+.link-label {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.32);
+}
+
+
+.link-value {
+    font-size: 16px;
+
+    color: rgba(255,255,255,0.75);
+
+    transition: color 0.3s ease;
+}
+
+
+.contact-final-link:hover .link-value {
+    color: #ffffff;
+}
+
+
+.link-arrow {
+    font-size: 20px;
+
+    color: rgba(255,255,255,0.4);
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.contact-final-link:hover .link-arrow {
+    transform: translate(4px, -4px);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.contact-final-location {
+    text-align: right;
+}
+
+
+/* =========================================================
+   CLOSING STATEMENT
+========================================================= */
+
+.contact-final-bottom {
+    position: relative;
+
+    width: 86%;
+
+    margin: 150px auto 0;
+
+    text-align: center;
+}
+
+.contact-final-bottom-line {
+    width: 100%;
+
+    height: 1px;
+
+    margin-bottom: 35px;
+
+    background: rgba(255,255,255,0.13);
+}
+
+
+.contact-final-bottom p {
+    margin: 0;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    color: rgba(255,255,255,0.4);
+}
+
+
+.contact-final-bottom p span {
+    color: rgba(255,255,255,0.75);
+}
+
+
+.contact-final-year {
+    display: block;
+
+    margin-top: 25px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.25);
+}
+
+
+/* =========================================================
+   SUBTLE ATMOSPHERIC GLOW
+========================================================= */
+
+.contact-final::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    left: 50%;
+    bottom: -350px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.025) 0%,
+            rgba(255,255,255,0.008) 35%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .contact-final {
+        min-height: auto;
+
+        padding: 120px 25px 55px;
+    }
+
+    .contact-final-number {
+        top: 95px;
+        left: 25px;
+    }
+
+    .contact-final-header {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .contact-final-main {
+        margin-left: 0;
+        margin-top: 80px;
+    }
+
+    .contact-final-main h2 {
+        font-size: clamp(52px, 14vw, 90px);
+
+        letter-spacing: -4px;
+    }
+
+    .contact-final-grid {
+        width: 100%;
+
+        margin-top: 90px;
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .contact-final-location {
+        text-align: left;
+    }
+
+    .contact-final-bottom {
+        width: 100%;
+
+        margin-top: 100px;
+    }
+
+    .contact-final-bottom p {
+        font-size: 11px;
+
+        line-height: 1.8;
+
+        letter-spacing: 3px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .contact-final-main h2 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .contact-final-link {
+        grid-template-columns: 70px 1fr 20px;
+
+        gap: 10px;
+    }
+
+    .link-value {
+        font-size: 13px;
+    }
+
+    .contact-final-label {
+        font-size: 11px;
+    }
+
+}
+
+/* =========================================================
+   FINAL CONTACT SECTION
+========================================================= */
+
+.contact-final {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 160px 7vw 70px;
+
+    background: #050505;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION NUMBER
+========================================================= */
+
+.contact-final-number {
+    position: absolute;
+
+    top: 135px;
+    left: 7vw;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.32);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.contact-final-header {
+    width: 86%;
+    margin-left: 10%;
+}
+
+.contact-final-label {
+    display: block;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+
+    color: rgba(255,255,255,0.55);
+}
+
+.contact-final-line {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 28px;
+
+    background: rgba(255,255,255,0.14);
+}
+
+
+/* =========================================================
+   MAIN MESSAGE
+========================================================= */
+
+.contact-final-main {
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+.contact-final-main h2 {
+    margin: 0;
+
+    font-size: clamp(65px, 9vw, 145px);
+
+    line-height: 0.86;
+
+    letter-spacing: -6px;
+
+    font-weight: 400;
+
+    color: #f2f2f2;
+}
+
+.contact-final-main h2 span {
+    color: rgba(255,255,255,0.22);
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION GRID
+========================================================= */
+
+.contact-final-grid {
+    width: 80%;
+
+    margin: 130px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.5fr
+        0.8fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   IDENTITY
+========================================================= */
+
+.contact-final-small {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.38);
+}
+
+.contact-final-intro p,
+.contact-final-location p {
+    margin-top: 14px;
+
+    font-size: 18px;
+
+    color: rgba(255,255,255,0.75);
+}
+
+
+/* =========================================================
+   CONTACT / SOCIAL LINKS
+========================================================= */
+
+.contact-final-links {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.contact-final-link {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr 30px;
+
+    align-items: center;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        padding 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.contact-final-link:first-child {
+    border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+
+.contact-final-link:hover {
+    padding-left: 12px;
+
+    border-color: rgba(255,255,255,0.4);
+}
+
+
+/* =========================================================
+   LINK TEXT
+========================================================= */
+
+.link-label {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.32);
+}
+
+
+.link-value {
+    font-size: 16px;
+
+    color: rgba(255,255,255,0.75);
+
+    transition: color 0.3s ease;
+}
+
+
+.contact-final-link:hover .link-value {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LINK ARROW
+========================================================= */
+
+.link-arrow {
+    font-size: 20px;
+
+    color: rgba(255,255,255,0.4);
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.contact-final-link:hover .link-arrow {
+    transform: translate(4px, -4px);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.contact-final-location {
+    text-align: right;
+}
+
+
+/* =========================================================
+   CLOSING STATEMENT
+========================================================= */
+
+.contact-final-bottom {
+    position: relative;
+
+    width: 86%;
+
+    margin: 150px auto 0;
+
+    text-align: center;
+}
+
+
+.contact-final-bottom-line {
+    width: 100%;
+
+    height: 1px;
+
+    margin-bottom: 35px;
+
+    background: rgba(255,255,255,0.13);
+}
+
+
+.contact-final-bottom p {
+    margin: 0;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    color: rgba(255,255,255,0.4);
+}
+
+
+.contact-final-bottom p span {
+    color: rgba(255,255,255,0.75);
+}
+
+
+.contact-final-year {
+    display: block;
+
+    margin-top: 25px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.25);
+}
+
+
+/* =========================================================
+   SUBTLE ATMOSPHERIC GLOW
+========================================================= */
+
+.contact-final::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    left: 50%;
+    bottom: -350px;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.025) 0%,
+            rgba(255,255,255,0.008) 35%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .contact-final {
+        min-height: auto;
+
+        padding: 120px 25px 55px;
+    }
+
+
+    .contact-final-number {
+        top: 95px;
+        left: 25px;
+    }
+
+
+    .contact-final-header {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .contact-final-main {
+        margin-left: 0;
+        margin-top: 80px;
+    }
+
+
+    .contact-final-main h2 {
+        font-size: clamp(52px, 14vw, 90px);
+
+        letter-spacing: -4px;
+    }
+
+
+    .contact-final-grid {
+        width: 100%;
+
+        margin-top: 90px;
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .contact-final-location {
+        text-align: left;
+    }
+
+
+    .contact-final-bottom {
+        width: 100%;
+
+        margin-top: 100px;
+    }
+
+
+    .contact-final-bottom p {
+        font-size: 11px;
+
+        line-height: 1.8;
+
+        letter-spacing: 3px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .contact-final-main h2 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .contact-final-link {
+        grid-template-columns: 70px 1fr 20px;
+
+        gap: 10px;
+    }
+
+
+    .link-value {
+        font-size: 13px;
+    }
+
+
+    .contact-final-label {
+        font-size: 11px;
+    }
+
+}
+
+/* =========================================================
+   LIGHT / DARK MODE TOGGLE
+========================================================= */
+
+.theme-toggle {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 25px;
+
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg);
+
+    background: rgba(255,255,255,0.08);
+
+    border-color: rgba(255,255,255,0.4);
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+body.light-mode {
+    background: #f4f4f1;
+    color: #111111;
+}
+
+
+/* Main backgrounds */
+
+body.light-mode .experimental-toolkit,
+body.light-mode .contact-final {
+    background: #f4f4f1;
+}
+
+
+/* General text */
+
+body.light-mode .toolkit-title span,
+body.light-mode .contact-final-label {
+    color: rgba(0,0,0,0.55);
+}
+
+
+/* Lines */
+
+body.light-mode .toolkit-title-line,
+body.light-mode .contact-final-line,
+body.light-mode .contact-final-bottom-line {
+    background: rgba(0,0,0,0.15);
+}
+
+
+/* Large headings */
+
+body.light-mode .toolkit-subtitle,
+body.light-mode .contact-final-main h2 {
+    color: #111111;
+}
+
+
+/* Secondary heading */
+
+body.light-mode .toolkit-subtitle span,
+body.light-mode .contact-final-main h2 span {
+    color: rgba(0,0,0,0.25);
+}
+
+
+/* Toolkit number */
+
+body.light-mode .toolkit-section-number,
+body.light-mode .contact-final-number {
+    color: rgba(0,0,0,0.35);
+}
+
+
+/* Research domains */
+
+body.light-mode .research-domain h3 {
+    color: #111111;
+}
+
+body.light-mode .domain-number {
+    color: rgba(0,0,0,0.3);
+}
+
+body.light-mode .domain-tools span {
+    color: rgba(0,0,0,0.45);
+}
+
+body.light-mode .domain-line {
+    background: rgba(0,0,0,0.3);
+}
+
+
+/* Central MATTER */
+
+body.light-mode .matter-label {
+    background: rgba(244,244,241,0.92);
+}
+
+body.light-mode .matter-label span {
+    color: rgba(0,0,0,0.85);
+}
+
+body.light-mode .matter-orbit {
+    border-color: rgba(0,0,0,0.16);
+}
+
+body.light-mode .matter-pulse {
+    background: #111111;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,0.35),
+        0 0 40px rgba(0,0,0,0.12);
+}
+
+
+/* Connection lines */
+
+body.light-mode .connection {
+    stroke: rgba(0,0,0,0.18);
+}
+
+
+/* Moving particles */
+
+body.light-mode .map-particle {
+    background: #111111;
+
+    box-shadow:
+        0 0 12px rgba(0,0,0,0.35);
+}
+
+
+/* Contact */
+
+body.light-mode .contact-final-intro p,
+body.light-mode .contact-final-location p {
+    color: rgba(0,0,0,0.7);
+}
+
+body.light-mode .contact-final-small {
+    color: rgba(0,0,0,0.4);
+}
+
+
+/* Contact links */
+
+body.light-mode .contact-final-link {
+    border-color: rgba(0,0,0,0.15);
+}
+
+body.light-mode .contact-final-link:hover {
+    border-color: rgba(0,0,0,0.4);
+}
+
+body.light-mode .link-label {
+    color: rgba(0,0,0,0.35);
+}
+
+body.light-mode .link-value {
+    color: rgba(0,0,0,0.7);
+}
+
+body.light-mode .contact-final-link:hover .link-value {
+    color: #000000;
+}
+
+body.light-mode .link-arrow {
+    color: rgba(0,0,0,0.45);
+}
+
+body.light-mode .contact-final-link:hover .link-arrow {
+    color: #000000;
+}
+
+
+/* Closing statement */
+
+body.light-mode .contact-final-bottom p {
+    color: rgba(0,0,0,0.4);
+}
+
+body.light-mode .contact-final-bottom p span {
+    color: rgba(0,0,0,0.75);
+}
+
+body.light-mode .contact-final-year {
+    color: rgba(0,0,0,0.3);
+}
+
+
+/* Theme button itself */
+
+body.light-mode .theme-toggle {
+    color: #111111;
+
+    border-color: rgba(0,0,0,0.2);
+}
+
+body.light-mode .theme-toggle:hover {
+    background: rgba(0,0,0,0.06);
+
+    border-color: rgba(0,0,0,0.4);
+}
+
+
+/* Atmospheric glow */
+
+body.light-mode .contact-final::before,
+body.light-mode .experimental-toolkit::before {
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,0,0,0.035) 0%,
+            rgba(0,0,0,0.01) 35%,
+            transparent 70%
+        );
+}
+
+/* =========================================================
+   COMPLETE LIGHT MODE
+   GLOBAL THEME OVERRIDE
+========================================================= */
+
+body.light-mode {
+    background: #f3f3ef !important;
+    color: #111111 !important;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+body.light-mode .navbar {
+    background: rgba(243,243,239,0.82) !important;
+
+    border-bottom:
+        1px solid rgba(0,0,0,0.08);
+}
+
+body.light-mode .logo,
+body.light-mode .logo-name {
+    color: #111111 !important;
+}
+
+body.light-mode .logo-subtitle {
+    color: #111111 !important;
+}
+
+body.light-mode .nav-links a {
+    color: #111111 !important;
+}
+
+body.light-mode .theme-toggle {
+    color: #111111 !important;
+
+    border-color:
+        rgba(0,0,0,0.22) !important;
+
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+body.light-mode .hero {
+    background: #f3f3ef !important;
+
+    color: #111111 !important;
+}
+
+body.light-mode .hero h1 {
+    color: #111111 !important;
+}
+
+body.light-mode .eyebrow {
+    color: #111111 !important;
+}
+
+body.light-mode .hero-description {
+    color: #111111 !important;
+}
+
+body.light-mode .research-tags span {
+    color: #111111 !important;
+
+    border-color:
+        rgba(0,0,0,0.16) !important;
+}
+
+body.light-mode .hero-quote p {
+    color: #111111 !important;
+}
+
+body.light-mode .hero-quote small {
+    color: #111111 !important;
+}
+
+body.light-mode .quote-mark {
+    color: #111111 !important;
+}
+
+body.light-mode .scroll-indicator span {
+    color: #111111 !important;
+}
+
+body.light-mode .scroll-circle {
+    color: #111111 !important;
+
+    border-color:
+        rgba(0,0,0,0.3) !important;
+}
+
+
+/* Hero scientific text */
+
+body.light-mode .spin-story {
+    color: rgba(0,0,0,0.7) !important;
+}
+
+body.light-mode .spin-story .story-line,
+body.light-mode .story-divider {
+    background: rgba(0,0,0,0.35) !important;
+}
+
+
+/* Hero atmospheric effects */
+
+body.light-mode .hero::before {
+    background:
+        radial-gradient(
+            circle,
+            rgba(60,120,200,0.10) 0%,
+            rgba(60,120,200,0.04) 30%,
+            transparent 70%
+        ) !important;
+}
+
+body.light-mode .hero::after {
+    background:
+        radial-gradient(
+            ellipse at 70% 45%,
+            transparent 0%,
+            rgba(243,243,239,0.05) 35%,
+            rgba(243,243,239,0.55) 80%,
+            #f3f3ef 100%
+        ) !important;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+body.light-mode .about-section {
+    background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(35,80,140,0.05),
+            transparent 32%
+        ),
+        #f3f3ef !important;
+
+    color: #111111 !important;
+
+    border-top-color:
+        rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .about-number,
+body.light-mode .about-label {
+    color: #111111 !important;
+}
+
+body.light-mode .about-line {
+    background: rgba(0,0,0,0.25) !important;
+}
+
+body.light-mode .about-statement h2 {
+    color: #111111 !important;
+}
+
+body.light-mode .about-statement em {
+    color: rgba(0,0,0,0.55) !important;
+}
+
+body.light-mode .about-text p {
+    color: rgba(0,0,0,0.58) !important;
+}
+
+body.light-mode .about-text .about-lead {
+    color: rgba(0,0,0,0.82) !important;
+}
+
+body.light-mode .about-footer > span {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .about-footer a {
+    color: #111111 !important;
+}
+
+
+/* About visual */
+
+body.light-mode .about-orbit {
+    border-color:
+        rgba(30,90,150,0.15) !important;
+}
+
+body.light-mode .about-core {
+    background: rgba(40,90,140,0.8) !important;
+}
+
+
+/* =========================================================
+   RESEARCH
+========================================================= */
+
+body.light-mode .research-section {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(35,75,120,0.025),
+            transparent 45%
+        ),
+        #f3f3ef !important;
+
+    color: #111111 !important;
+
+    border-top-color:
+        rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .research-number {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .research-header > span {
+    color: rgba(0,0,0,0.6) !important;
+}
+
+body.light-mode .research-header-line {
+    background: rgba(0,0,0,0.25) !important;
+}
+
+body.light-mode .research-intro h2 {
+    color: #111111 !important;
+}
+
+body.light-mode .research-intro h2 em {
+    color: rgba(0,0,0,0.5) !important;
+}
+
+body.light-mode .research-intro > p {
+    color: rgba(0,0,0,0.58) !important;
+}
+
+
+/* Research grid */
+
+body.light-mode .research-grid {
+    border-color:
+        rgba(0,0,0,0.14) !important;
+
+    background:
+        rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .research-card {
+    background: #eeeeea !important;
+
+    border-color:
+        rgba(0,0,0,0.12) !important;
+}
+
+body.light-mode .research-card:hover {
+    background: #e8e8e3 !important;
+}
+
+body.light-mode .research-card::after {
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(235,235,230,0.95)
+        ) !important;
+}
+
+body.light-mode .card-number {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .card-kicker {
+    color: rgba(0,0,0,0.45) !important;
+}
+
+body.light-mode .card-content h3 {
+    color: #111111 !important;
+}
+
+body.light-mode .card-content p {
+    color: rgba(0,0,0,0.55) !important;
+}
+
+body.light-mode .card-arrow {
+    color: #111111 !important;
+
+    border-color:
+        rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .research-card:hover .card-arrow {
+    background:
+        rgba(0,0,0,0.05) !important;
+
+    border-color:
+        rgba(0,0,0,0.65) !important;
+}
+
+
+/* Research visual elements */
+
+body.light-mode .thz-axis {
+    background: rgba(0,0,0,0.12) !important;
+}
+
+body.light-mode .spin-name,
+body.light-mode .spin-system small {
+    color: rgba(0,0,0,0.65) !important;
+}
+
+body.light-mode .spin-one .spin-axis,
+body.light-mode .precession-axis {
+    opacity: 0.5;
+}
+
+body.light-mode .spin-ring {
+    border-color:
+        rgba(0,0,0,0.15) !important;
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+========================================================= */
+
+body.light-mode .publications-section {
+    background: #f3f3ef !important;
+
+    color: #111111 !important;
+
+    border-top-color:
+        rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .publications-number {
+    color: rgba(0,0,0,0.35) !important;
+}
+
+body.light-mode .publications-header {
+    color: #111111 !important;
+}
+
+body.light-mode .publications-header-line {
+    background: rgba(0,0,0,0.2) !important;
+}
+
+body.light-mode .publications-title h2 {
+    color: #111111 !important;
+}
+
+body.light-mode .publications-title h2 em {
+    color: rgba(0,0,0,0.5) !important;
+}
+
+body.light-mode .publications-description p {
+    color: rgba(0,0,0,0.58) !important;
+}
+
+body.light-mode .scholar-button {
+    color: #111111 !important;
+
+    border-color:
+        rgba(0,0,0,0.25) !important;
+}
+
+body.light-mode .scholar-arrow {
+    color: #111111 !important;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+body.light-mode .experience-section {
+    background: #f3f3ef !important;
+
+    color: #111111 !important;
+
+    border-top-color:
+        rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .experience-number {
+    color: rgba(0,0,0,0.35) !important;
+}
+
+body.light-mode .experience-header {
+    color: #111111 !important;
+}
+
+body.light-mode .experience-header-line {
+    background: rgba(0,0,0,0.2) !important;
+}
+
+body.light-mode .experience-intro h2 {
+    color: #111111 !important;
+}
+
+body.light-mode .experience-intro h2 em {
+    color: rgba(0,0,0,0.5) !important;
+}
+
+body.light-mode .experience-intro p {
+    color: rgba(0,0,0,0.55) !important;
+}
+
+
+/* Timeline */
+
+body.light-mode .experience-timeline::before {
+    background:
+        rgba(0,0,0,0.15) !important;
+}
+
+body.light-mode .experience-year {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .experience-marker span {
+    background: #f3f3ef !important;
+
+    border-color:
+        rgba(0,0,0,0.5) !important;
+}
+
+body.light-mode .experience-current .experience-marker span {
+    border-color:
+        rgba(0,0,0,0.8) !important;
+
+    box-shadow:
+        0 0 0 6px rgba(0,0,0,0.04) !important;
+}
+
+body.light-mode .experience-type {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .experience-location {
+    color: rgba(0,0,0,0.3) !important;
+}
+
+body.light-mode .experience-content h3 {
+    color: rgba(0,0,0,0.9) !important;
+}
+
+body.light-mode .experience-content h4 {
+    color: rgba(0,0,0,0.5) !important;
+}
+
+body.light-mode .experience-content p {
+    color: rgba(0,0,0,0.52) !important;
+}
+
+body.light-mode .experience-item:hover .experience-content h3 {
+    color: #000000 !important;
+}
+
+
+/* Experience decoration */
+
+body.light-mode .experience-section::before {
+    border-color:
+        rgba(0,0,0,0.035) !important;
+}
+
+body.light-mode .experience-section::after {
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(0,0,0,0.1),
+            transparent
+        ) !important;
+}
+
+
+/* =========================================================
+   EXPERIMENTAL TOOLKIT
+========================================================= */
+
+body.light-mode .experimental-toolkit {
+    background: #f3f3ef !important;
+
+    color: #111111 !important;
+
+    border-top-color:
+        rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .toolkit-section-number {
+    color: rgba(0,0,0,0.35) !important;
+}
+
+body.light-mode .toolkit-title span {
+    color: rgba(0,0,0,0.55) !important;
+}
+
+body.light-mode .toolkit-title-line {
+    background: rgba(0,0,0,0.18) !important;
+}
+
+body.light-mode .toolkit-subtitle {
+    color: #111111 !important;
+}
+
+
+/* Map connections */
+
+body.light-mode .connection {
+    stroke: rgba(0,0,0,0.17) !important;
+}
+
+
+/* Domains */
+
+body.light-mode .research-domain h3 {
+    color: #111111 !important;
+}
+
+body.light-mode .domain-number {
+    color: rgba(0,0,0,0.3) !important;
+}
+
+body.light-mode .domain-line {
+    background: rgba(0,0,0,0.3) !important;
+}
+
+body.light-mode .domain-tools span {
+    color: rgba(0,0,0,0.45) !important;
+}
+
+body.light-mode .research-domain:hover .domain-tools span {
+    color: rgba(0,0,0,0.75) !important;
+}
+
+
+/* Matter core */
+
+body.light-mode .matter-label {
+    background: rgba(243,243,239,0.94) !important;
+}
+
+body.light-mode .matter-label span {
+    color: #111111 !important;
+}
+
+body.light-mode .matter-orbit {
+    border-color:
+        rgba(0,0,0,0.16) !important;
+}
+
+body.light-mode .matter-pulse {
+    background: #111111 !important;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,0.35),
+        0 0 40px rgba(0,0,0,0.1) !important;
+}
+
+body.light-mode .map-particle {
+    background: #111111 !important;
+
+    box-shadow:
+        0 0 12px rgba(0,0,0,0.3) !important;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+body.light-mode .contact-final {
+    background: #f3f3ef !important;
+
+    color: #111111 !important;
+}
+
+body.light-mode .contact-final-number {
+    color: rgba(0,0,0,0.35) !important;
+}
+
+body.light-mode .contact-final-label {
+    color: rgba(0,0,0,0.55) !important;
+}
+
+body.light-mode .contact-final-line,
+body.light-mode .contact-final-bottom-line {
+    background: rgba(0,0,0,0.14) !important;
+}
+
+body.light-mode .contact-final-main h2 {
+    color: #111111 !important;
+}
+
+body.light-mode .contact-final-main h2 span {
+    color: rgba(0,0,0,0.25) !important;
+}
+
+body.light-mode .contact-final-small {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .contact-final-intro p,
+body.light-mode .contact-final-location p {
+    color: rgba(0,0,0,0.7) !important;
+}
+
+
+/* Contact links */
+
+body.light-mode .contact-final-link {
+    border-color:
+        rgba(0,0,0,0.14) !important;
+}
+
+body.light-mode .contact-final-link:first-child {
+    border-top-color:
+        rgba(0,0,0,0.14) !important;
+}
+
+body.light-mode .contact-final-link:hover {
+    border-color:
+        rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .link-label {
+    color: rgba(0,0,0,0.35) !important;
+}
+
+body.light-mode .link-value {
+    color: rgba(0,0,0,0.7) !important;
+}
+
+body.light-mode .contact-final-link:hover .link-value {
+    color: #000000 !important;
+}
+
+body.light-mode .link-arrow {
+    color: rgba(0,0,0,0.45) !important;
+}
+
+body.light-mode .contact-final-link:hover .link-arrow {
+    color: #000000 !important;
+}
+
+
+/* Closing */
+
+body.light-mode .contact-final-bottom p {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+body.light-mode .contact-final-bottom p span {
+    color: rgba(0,0,0,0.75) !important;
+}
+
+body.light-mode .contact-final-year {
+    color: rgba(0,0,0,0.3) !important;
+}
+
+
+/* Contact glow */
+
+body.light-mode .contact-final::before {
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,0,0,0.025) 0%,
+            rgba(0,0,0,0.008) 35%,
+            transparent 70%
+        ) !important;
+}
+
+
+/* =========================================================
+   GLOBAL LIGHT-MODE SAFETY NET
+========================================================= */
+
+/*
+   These catch any common text elements that still inherit
+   hard-coded white styling from the original dark theme.
+*/
+
+body.light-mode .section-label,
+body.light-mode .section-number,
+body.light-mode small {
+    color: rgba(0,0,0,0.45);
+}
+
+
+/* Don't affect scientific blue/orange visual elements */
+body.light-mode canvas {
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   HERO PORTRAIT
+========================================================= */
+
+.hero-portrait {
+    position: absolute;
+    right: 4%;
+    bottom: 0;
+    width: 34%;
+    max-width: 500px;
+    height: 75%;
+    z-index: 3;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.hero-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+
+    /* Dark cinematic treatment */
+    filter:
+        brightness(0.55)
+        contrast(1.18)
+        saturate(0.65);
+
+    opacity: 0.92;
+
+    /* Fade the photograph into the dark hero */
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 8%,
+            black 78%,
+            transparent 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 8%,
+            black 78%,
+            transparent 100%
+        );
+}
+
+
+/* =========================================================
+   THz WAVEFORM
+========================================================= */
+
+.hero-thz-wave {
+    position: absolute;
+    left: 25%;
+    top: 46%;
+    width: 72%;
+    height: 180px;
+
+    z-index: 4;
+    pointer-events: none;
+
+    opacity: 0.85;
+}
+
+.hero-thz-wave svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.hero-thz-wave path {
+    fill: none;
+
+    stroke: #d8b36a;
+    stroke-width: 2.5;
+
+    filter:
+        drop-shadow(0 0 5px rgba(216, 179, 106, 0.75))
+        drop-shadow(0 0 14px rgba(216, 179, 106, 0.35));
+
+    stroke-linecap: round;
+}
+
+
+/* =========================================================
+   HERO CONTENT — KEEP TEXT ABOVE BACKGROUND
+========================================================= */
+
+.hero-content {
+    z-index: 8;
+}
+
+.hero-quote {
+    z-index: 8;
+}
+
+.scroll-indicator {
+    z-index: 8;
+}
+
+.spin-story {
+    z-index: 7;
+}
